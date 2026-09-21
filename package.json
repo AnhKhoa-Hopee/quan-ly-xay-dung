@@ -1,0 +1,12 @@
+{
+  "name": "quan-ly-xay-dung",
+  "version": "1.0.0",
+  "private": true,
+  "description": "He thong Quan ly Xay dung",
+  "type": "module",
+  "scripts": {
+    "start": "node server.js",
+    "seed": "node src/seed.js --force"
+  },
+  "engines": { "node": ">=18" }
+}

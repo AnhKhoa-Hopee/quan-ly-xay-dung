@@ -1,0 +1,18 @@
+# Phụ thuộc
+node_modules/
+vendor/
+
+# Dữ liệu runtime
+data/
+
+# Sản phẩm sinh tự động (PDF tài liệu)
+exports/
+server.log
+*.log
+
+# Công cụ phát triển
+.orthex/
+.agents/
+
+# Hệ điều hành
+.DS_Store
