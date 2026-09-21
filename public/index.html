@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="vi">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Quản lý Xây dựng</title>
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%230f172a'/%3E%3Cpath d='M16 6l9 5.2v9.6L16 26l-9-5.2v-9.6z' fill='none' stroke='%23f59e0b' stroke-width='2'/%3E%3C/svg%3E" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="/styles.css" />
+</head>
+<body>
+  <div class="app">
+    <aside class="sidebar" id="sidebar">
+      <div class="brand">
+        <span class="brand-mark">QL</span>
+        <span class="brand-text"><b>Quản lý</b><small>Xây dựng</small></span>
+      </div>
+      <nav class="nav" id="nav"></nav>
+      <div class="sidebar-foot">
+        <div class="who" id="who">Người dùng</div>
+        <div class="tiny" id="meta">Đang tải…</div>
+      </div>
+    </aside>
+
+    <main class="main">
+      <header class="topbar">
+        <button class="icon-btn menu-btn" id="menuBtn" aria-label="Mở menu">☰</button>
+        <div class="title-wrap">
+          <h1 id="pageTitle">Tổng quan</h1>
+          <p id="pageSub" class="sub">Tổng quan tiến độ, chi phí và cảnh báo</p>
+        </div>
+        <div class="topbar-actions">
+          <select id="projectFilter" class="select" title="Lọc theo dự án"><option value="">Tất cả dự án</option></select>
+          <input id="search" class="search" type="search" placeholder="Tìm kiếm…" />
+          <button class="btn primary" id="addBtn">+ Thêm mới</button>
+        </div>
+      </header>
+      <section class="content" id="content"></section>
+    </main>
+  </div>
+
+  <div class="modal-backdrop" id="modalBackdrop" hidden>
+    <div class="modal" role="dialog" aria-modal="true">
+      <div class="modal-head">
+        <h2 id="modalTitle">Thêm mới</h2>
+        <button class="icon-btn" id="modalClose" aria-label="Đóng">×</button>
+      </div>
+      <form id="modalForm" class="modal-body"></form>
+      <div class="modal-foot">
+        <button class="btn ghost" id="modalCancel">Hủy</button>
+        <button class="btn primary" id="modalSave">Lưu</button>
+      </div>
+    </div>
+  </div>
+
+  <div class="toast-wrap" id="toastWrap"></div>
+  <script type="module" src="/app.js"></script>
+</body>
+</html>
